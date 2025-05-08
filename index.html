@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>FACT SHEET</title>
+    <style type="text/tailwindcss">
+        .button-container{
+            @apply border-b-2 mb-5 p-2 flex justify-end;
+        }
+        .download-button{
+            @apply bg-red-700 text-white w-[100px] h-[40px] p-2 text-xs font-medium cursor-pointer;
+        }
+        .title-header{
+            @apply flex gap-2 items-end font-medium;
+        }
+        .title-header::after{
+            content: '';
+            height: 2px;
+            flex: 1;
+            background-color: black;   
+        }
+        .gross-subtitle{
+            position: absolute;
+            top: 0;
+            right: 35%;
+            background-color: white;
+            padding: 0px 5px;
+        }
+        .gross-title-header::after{
+            content: '';
+            height: 2px;
+            flex: 1;
+            background-color: black;   
+        }
+        .grid-container div{
+            @apply bg-red-700 text-white leading-[1.2] flex flex-col justify-center items-center text-center min-h-[60px] p-5;
+            font-size: 13px;
+        }
+        .key-table th{
+            @apply border-b-2;
+        }
+        .key-table th, .key-table td{
+            border-right: 2px solid black;
+            text-align: right;
+            padding: 4px;
+            font-size: 12px;
+        }
+        .key-table th:nth-child(5), .key-table td:nth-child(5){
+            border-right: none !important;
+        }
+        .key-table th:nth-child(1),.key-table td:nth-child(1){
+            text-align: left !important;
+        }
+        .key-table tr:nth-child(even){
+            background-color: #eee;
+        }
+        .foot-note{
+            @apply my-4;
+        }
+
+        .foot-note p{
+            @apply text-[10px] text-gray-400;
+        }
+        .story-title{
+            @apply flex items-center gap-2;
+        }
+        .story-card{
+            @apply bg-red-700 flex items-center w-[400px] h-[80px] text-white text-xs pl-2;
+        }
+        .story-card ul{
+            @apply p-4;
+        }
+        .story-card li{
+            @apply list-disc;
+        }
+        .management-container{
+            @apply flex justify-evenly items-center gap-3 p-3;
+        }
+        .management-card{
+            @apply w-1/3 border-5 border-red-700 p-5 text-xs;
+        }
+        .calendar-table {
+            @apply text-xs;
+        }
+        .calendar-table td{
+            @apply text-left pr-5;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container w-6/12 mx-auto">
+        <div class="button-container">
+            <button class="download-button">Download PDF</button>
+        </div>
+
+        <div class="flex justify-between mb-5">
+            <div class="flex align-bottom gap-10">
+                <div class="text-4xl font-medium flex flex-col justify-center">
+                    <h2>FACTSHEET</h2>
+                </div>
+                <div class="leading-[1.2] text-sm p-4 border-l-2 flex flex-col justify-center">
+                    <p>ISIN: ESO105446008</p>
+                    <p>Listings: Madrid</p>
+                </div>
+                <div class="leading-[1.2] text-sm p-4 border-l-2 flex flex-col justify-center">
+                    <p>Ticker symbol (Madrid): LDA</p>
+                    <p>Bloomberge Code: LDA</p>
+                    <p>Reuters Code: LDA</p>
+                </div>
+            </div>
+            <div class="w-[100px] h-full flex align-middle">
+                <img src="./Materials/logo.png" alt="logo"/>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="title-header flex gap-2 items-end text-2xl font-medium">LÍNEA DIRECTA</h2>
+            <p class="leading-[1.2] text-xs py-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum urna nunc, congue eget nisi eget, auctor lobortis elit. Etiam ultricies tellus ac leo condimentum, eu consequat nunc rhoncus. Nunc sed nisl leo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque libero massa, elementum commodo consectetur a, mattis mattis sapien. Duis erat lorem, ultrices in ipsum vel, vestibulum dapibus massa.
+            </p>
+        </div>
+
+        <div>
+            <h2 class="title-header">FINANCIAL YEAR 2023</h2>
+            <div class="grid-container grid grid-cols-4 gap-4 p-5">
+                <div>
+                    <strong>27,254</strong>
+                    <p>Employees</p>
+                </div>
+                <div>
+                    <strong>1.96</strong>
+                    <p>EUR</p>
+                    <p>Earnings per share</p>
+                </div>
+                <div>
+                    <strong>4,095</strong>
+                    <p>million items</p>
+                    <p>Mail Volume</p>
+                </div>
+                <div>
+                    <strong>16</strong>
+                    <p>kg CO₂e/m³ CO₂e emissions per shipment volume¹</p>
+                </div>
+                <div>
+                    <strong>2,741</strong>
+                    <p>EUR m</p>
+                    <p>Revenue</p>
+                </div>
+                <div>
+                    <strong>1.78</strong>
+                    <p>EUR</p>
+                    <p>Dividend per share</p>
+                </div>
+                <div>
+                    <strong>476</strong>
+                    <p>million items</p>
+                    <p>Parcel Volume</p>
+                </div>
+                <div>
+                    <strong>4,133</strong>
+                    <p>Electric Vehicles</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="gross-title-header relative flex gap-2 items-end font-medium">
+                Gross written premiums
+                <p class="gross-subtitle">OUR MARKETS</p>
+            </h2>
+            <div class="graph flex items-center justify-between">
+                <img src="./Materials/pie.png" alt="pie-chart">
+                <img src="./Materials/map.png" alt="map" class="w-3/4">
+            </div>
+        </div>
+
+        <div>
+            <h2 class="title-header">KEY FIGURES</h2>
+            <table class="key-table border-y-2 w-full mt-4">
+                <tr>
+                    <th>EUR m</th>
+                    <th></th>
+                    <th>2021</th>
+                    <th>2022</th>
+                    <th>2023</th>
+                </tr>
+                <tr>
+                    <td>Revenue</td>
+                    <td>EUR m</td>
+                    <td>2,519.6</td>
+                    <td>2,552.0</td>
+                    <td>2,740.8</td>
+                </tr>
+                <tr>
+                    <td>EBITDA</td>
+                    <td>EUR m</td>
+                    <td>370.4</td>
+                    <td>372.7</td>
+                    <td>391.6</td>
+                </tr>
+                <tr>
+                    <td>EBITDA margin</td>
+                    <td>%</td>
+                    <td>14.7</td>
+                    <td>14.8</td>
+                    <td>14.3</td>
+                </tr>
+                <tr>
+                    <td>EBIT</td>
+                    <td>EUR m</td>
+                    <td>204.7</td>
+                    <td>188.4</td>
+                    <td>190.2</td>
+                </tr>
+                <tr>
+                    <td>EBIT margin</td>
+                    <td>%</td>
+                    <td>8.1</td>
+                    <td>7.5</td>
+                    <td>6.9</td>
+                </tr>
+                <tr>
+                    <td>Earnings per share</td>
+                    <td>EUR</td>
+                    <td>2.25</td>
+                    <td>1.86</td>
+                    <td>1.96</td>
+                </tr>
+                <tr>
+                    <td>Total assets</td>
+                    <td>EUR m</td>
+                    <td>4,792.6</td>
+                    <td>5,383.9</td>
+                    <td>5,677.1</td>
+                </tr>
+                <tr>
+                    <td>Operating free cashflow</td>
+                    <td>EUR m²</td>
+                    <td>217.9</td>
+                    <td>183.1</td>
+                    <td>221.6</td>
+                </tr>
+                <tr>
+                    <td>Employees</td>
+                    <td>FTE</td>
+                    <td>27,275</td>
+                    <td>27,132</td>
+                    <td>27,254</td>
+                </tr>
+                <tr>
+                    <td>Customer Satisfaction</td>
+                    <td>CSI³</td>
+                    <td>72</td>
+                    <td>72</td>
+                    <td>71</td>
+                </tr>
+                <tr>
+                    <td>CO₂e emissions per shipment volume</td>
+                    <td>kg CO₂ e/m³</td>
+                    <td>19</td>
+                    <td>19</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>Electric Vehicles</td>
+                    <td>Number</td>
+                    <td>2,462</td>
+                    <td>3,121</td>
+                    <td>4,133</td>
+                </tr>
+            </table>
+            <div class="foot-note">
+                <p>1 Österreichische Post AG, Austria</p>
+                <p>2 Free cash flow before acquisitions, securities, money market investments, growth capex and core banking assets</p>
+                <p>3 Customer Satisfaction Index: Scale of 0-100, 50: critical, 51-60: fair, 61-70: good, 71-80: very good, 81-100: excellent</p>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="title-header">INVESTMENT STORY</h2>
+            <div class="grid grid-cols-2 gap-2 gap-x-15 my-5">
+                <div>
+                    <p class="story-title">Predictable Business Model <img class="w-[20px]" src="./Materials/A.svg" alt="A"/></p>
+                    <div class="story-card">
+                        <ul>
+                            <li>Solid revenue development with leading market position in Austria</li>
+                            <li>Sustaianble profitability due to an efficient cost structure</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <p class="story-title">Attractive Dividend Policy <img class="w-[20px]" src="./Materials/B.png" alt="B"/></p>
+                    <div class="story-card">
+                        <ul>
+                            <li>Predictable development of dividends based on profitability and generated cash flow</li>
+                            <li>Annual dividend distribution of at least 75% of the Group net profit planned</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <p class="story-title">Promised - Delivered <img class="w-[20px]" src="./Materials/C.png" alt="C"/></p>
+                    <div class="story-card">
+                        <ul>
+                            <li>Prudent and realistic guidance with clearly defined objectives</li>
+                            <li>Clear commitment to achieve communicated targets</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <p class="story-title">Decarbonisation of Logistics <img class="w-[20px]" src="./Materials/D.png" alt="D"/></p>
+                    <div class="story-card">
+                        <ul>
+                            <li>Group-wide reduction in fossil energy resources</li>
+                            <li>Massive reduction in carbon emissions in Austria by 2030</li>
+                        </ul>
+                    </div>
+                    <a href="#" > > <span class="underline text-sm">Investmentstory</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="title-header ">SHARE PERFORMANCE</h2>
+            <div class="my-4">
+                <img class="" src="./Materials/graph.png" alt="graph">
+            </div>
+        </div>
+        <div class="flex">
+            <div class="w-3/4 mr-4">
+                <h2 class="title-header ">SHAREHOLD STRUCTURE</h2>
+                <img class="object-fill my-4" src="./Materials/SS-EN.png" alt="sharehold-structure">
+            </div>
+            <div class="w-2/4">
+                <h2 class="title-header relative ">DIVIDEND <span class="absolute -bottom-[50%] text-sm">EUR</span></h2>
+                <img class="mt-4" src="./Materials/dividends2.png" alt="dividends">
+                <a href="#">> <span class="underline text-sm">Dividend history</span></a>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="title-header ">MANAGEMENT BOARD</h2>
+            <div class="management-container">
+                <div class="management-card">
+                    <p class="underline">Patricia Ayuela</p>
+                    <p>CEO</p>
+                    <p>Chief Executive Officer</p>
+                </div>
+                <div class="management-card">
+                    <p class="underline">Alfonso Botín-Sanz de Sautuola</p>
+                    <p>President</p>
+                    <p>President</p>
+                </div>
+                <div class="management-card">
+                    <p class="underline">Fernando Masaveu</p>
+                    <p>Director</p>
+                    <p>Director</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t-2 flex gap-30 py-3">
+            <div class="">
+                <h2 class="font-semibold text-sm">FINANCIAL CALENDAR</h2>
+                <table class="calendar-table">
+                    <tr>
+                        <td>18 April 2024</td>
+                        <td>Annual General Meeting 2024</td>
+                    </tr>
+                    <tr>
+                        <td>26 May/02 May 2024</td>
+                        <td>Ex-Date/Dividend payment day</td>
+                    </tr>
+                    <tr>
+                        <td>08 May 2024</td>
+                        <td>Interim report for Q1 2024</td>
+                    </tr>
+                    <tr>
+                        <td>07 August 2024</td>
+                        <td>Half-year financial report 2024</td>
+                    </tr>
+                    <tr>
+                        <td>06 November 2024</td>
+                        <td>Interim report Q1-3 2024</td>
+                    </tr>
+                </table>
+                <a href="#">> <span class="underline text-xs">Financial Calendar</span></a>
+            </div>
+            <div class="text-xs">
+                <h2 class="font-semibold text-sm">CONTACT INVESTOR RELATIONS</h2>
+                <p>Rochusplatz 1, 1030 Madrid  </p>
+                <p>Tel.: +43 57767-30400</p>
+                <p>E-mail: <span class="underline">investor@post.at</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
